@@ -14,5 +14,10 @@ public interface UserMapper {
 	@Mapping(source = "userType.ustyId" , target = "ustyId")
 	public UserDTO userstoUserDTO(Users users);
 	
+	@Mapping(target = "userType.ustyId" , source ="ustyId" )
+	public Users userDTOtoUser(UserDTO userDTO);
+	
 	public List<UserDTO> usersListTouserDTOList(List<Users> users);
+	
+	public List<Users> userDTOListToUserList(List<UserDTO> userDTOs);
 }
